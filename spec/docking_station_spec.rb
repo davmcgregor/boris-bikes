@@ -54,5 +54,17 @@ describe DockingStation do
         end
     end
 
+    # it "releases working bikes" do 
+    #     subject.dock double(:bike, broken?: false)
+    #     bike = subject.release_bike
+    #     expect(bike).to_not be_broken
+    # end
+
+    it 'releases working bikes' do
+        bike = double(:bike, broken?: false)
+        subject.dock bike
+        expect(subject.release_bike).to be bike
+    end
+
 end
 
