@@ -14,7 +14,6 @@ This challenge is the first afternoon challenge at [Makers Academy](https://gith
 ## <a name="Task">The Task</a>
 This project is based on the `User Stories` listed below. Each `User Story` has been further broken down into `Objects` and `Methods`. Tests have been designed for all features in line with TDD best-practice.
 
-
 ## <a name="Installation">Installation Instructions</a>
 
 1. Fork this repository, clone to your local machine then change directory into it:
@@ -49,18 +48,20 @@ The system's functionality includes:
  > station = DockingStation.new
  > bike = Bike.new
 ```
-# To report a bike as broken, use .report_broken
+To report a bike as broken, use .report_broken
 ```
 > bike.report_broken
 > bike.broken?
  => true
  ```
 
-# To dock a bike at a docking station, use .dock on the station and pass bike as an argument. An array of bikes inside the docking station can be access with .bikes. Docking will fail is the station is at capacity.,
+To dock a bike at a docking station, use .dock on the station and pass bike as an argument. An array of bikes inside the docking station can be access with .bikes. Docking will fail is the station is at capacity.,
 
+```
 > station.dock(bike)
 > station.bikes
 => [#<Bike:0x007fea65216040 @broken=false>] 
+```
 
 ## <a name="Story">User Stories</a>
 
@@ -137,8 +138,8 @@ ONE:
 
 TWO:
 
-| Object: | Bike | | | |
-| ------- | ----- | - | - | - |
+| Object: | Bike | | | 
+| ------- | ----- | - | - | 
 | **Attributes:** | broken |
 | **Methods:** | broken? | report_broken | fix |
 
