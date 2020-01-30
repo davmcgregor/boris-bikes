@@ -14,6 +14,13 @@ describe Bike do
     bike.report_broken
     expect(bike.working?).to eq false
   end
+
+  it 'fixes a broken bike' do
+    bike = Bike.new
+    bike.report_broken
+    bike.fix
+    expect(bike.status).to eq :working
+  end
 end
 
 

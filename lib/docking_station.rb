@@ -5,7 +5,7 @@ require_relative 'garage'
 class DockingStation    
   DEFAULT_CAPACITY = 20
 
-  attr_reader :capacity
+  attr_reader :bikes, :capacity
 
   def initialize (capacity=DEFAULT_CAPACITY)
     @bikes = []
@@ -15,7 +15,7 @@ class DockingStation
   def release_bike        
     fail 'No bikes available' if empty?
     fail 'Cannot release broken bike' if bikes.last.working? == false 
-    bikes.last
+    bikes.pop
   end
 
   def dock(bike)
@@ -23,9 +23,17 @@ class DockingStation
     bikes << bike
   end
 
-  private
+  def remove_bikes
+    bikes.map do |bike|
+      if bike.working? == false
+        bikes.delete(bike)
+      else 
+        bike
+      end
+    end
+  end
 
-  attr_reader :bikes
+  private
 
   def full?
     bikes.count >= capacity

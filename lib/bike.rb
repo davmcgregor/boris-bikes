@@ -1,5 +1,5 @@
 class Bike
-    attr_reader :status
+    attr_accessor :status
 
     def initialize
         @status = :working
@@ -11,5 +11,9 @@ class Bike
 
     def report_broken
         @status = :broken
+    end
+
+    def fix
+        @status = :working
     end
 end
