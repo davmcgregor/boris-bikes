@@ -17,12 +17,12 @@ class Garage
     garage_bikes.map { |bike| garage_bikes.delete(bike) }
   end
 
-  def fix(bike)
-		bike.fix
+  def fix_bikes
+    garage_bikes.map { |bike| bike.fix } 
 	end
 
   def return_fixed_bikes(van)
-    garage_bikes.map { |bike| fix(bike) } 
+    fix_bikes
     garage_bikes.each { |bike| van.van_bikes << bike }
     empty_garage
   end
