@@ -1,12 +1,19 @@
-require 'docking_station'
+require 'bike'
 
 describe Bike do
-    it { is_expected.to respond_to(:broken?) }
+  subject(:bike) { described_class.new }
 
-    it 'can be reported broken' do
-        subject.report_broken
-        expect(subject).to be_broken
-    end
+  it { is_expected.to respond_to(:working?) }
+
+  it 'allows the user to report broken bikes' do 
+    bike.report_broken
+    expect(bike.status).to eq :broken
+  end
+
+  it 'says that the bike is not working when broken' do
+    bike.report_broken
+    expect(bike.working?).to eq false
+  end
 end
 
 
