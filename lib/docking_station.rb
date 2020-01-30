@@ -24,13 +24,7 @@ class DockingStation
   end
 
   def remove_bikes
-    bikes.map do |bike|
-      if bike.broken? == true
-        bikes.delete(bike)
-      else 
-        bike
-      end
-    end
+    bikes.delete_if { |bike| bike.broken? }
   end
 
   private

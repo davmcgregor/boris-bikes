@@ -15,15 +15,11 @@ class Van
   end
 
   def empty_van
-    van_bikes.map do |bike|
-        van_bikes.delete(bike)
-    end
+    van_bikes.map { |bike| van_bikes.delete(bike) }
   end
 
   def distribute_bikes(station)
-    van_bikes.each do |bike|
-      station.bikes << bike
-    end
+    van_bikes.each { |bike| station.bikes << bike }
     empty_van
   end
 end
