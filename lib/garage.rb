@@ -19,9 +19,17 @@ class Garage
     end
   end
 
+  def fix(bike)
+		bike.fix
+	end
+
   def return_fixed_bikes(van)
-    garage_bikes.map{ |b| b = b.fix }
-    van.van_bikes << garage.bikes
+    garage_bikes.map do |bike|
+      fix(bike)
+    end 
+    garage_bikes.each do |bike|
+      van.van_bikes << bike
+    end
     empty_garage
   end
 end

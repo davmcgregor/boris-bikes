@@ -1,19 +1,19 @@
 class Bike
-    attr_accessor :status
-
-    def initialize
-        @status = :working
+    def initialize(broken=false)
+        @broken = broken
     end
 
-    def working?
-        @status == :working ? true : false
+    def broken?
+        @broken
     end
 
     def report_broken
-        @status = :broken
+        @broken = true
+        self
     end
 
     def fix
-        @status = :working
+        @broken = false 
+        self
     end
 end

@@ -3,23 +3,18 @@ require 'bike'
 describe Bike do
   subject(:bike) { described_class.new }
 
-  it { is_expected.to respond_to(:working?) }
+  it { is_expected.to respond_to(:broken?) }
 
   it 'allows the user to report broken bikes' do 
     bike.report_broken
-    expect(bike.status).to eq :broken
-  end
-
-  it 'says that the bike is not working when broken' do
-    bike.report_broken
-    expect(bike.working?).to eq false
+    expect(bike.broken?).to eq true
   end
 
   it 'fixes a broken bike' do
     bike = Bike.new
     bike.report_broken
     bike.fix
-    expect(bike.status).to eq :working
+    expect(bike.broken?).to eq false
   end
 end
 

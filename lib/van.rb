@@ -7,7 +7,7 @@ class Van
 
   def get_bikes(station)
     station.bikes.each do |bike|
-      if bike.working? == false
+      if bike.broken? == true
         van_bikes << bike
       end
     station.remove_bikes
@@ -20,4 +20,10 @@ class Van
     end
   end
 
+  def distribute_bikes(station)
+    van_bikes.each do |bike|
+      station.bikes << bike
+    end
+    empty_van
+  end
 end

@@ -14,7 +14,7 @@ class DockingStation
   
   def release_bike        
     fail 'No bikes available' if empty?
-    fail 'Cannot release broken bike' if bikes.last.working? == false 
+    fail 'Cannot release broken bike' if bikes.last.broken? == true 
     bikes.pop
   end
 
@@ -25,7 +25,7 @@ class DockingStation
 
   def remove_bikes
     bikes.map do |bike|
-      if bike.working? == false
+      if bike.broken? == true
         bikes.delete(bike)
       else 
         bike
