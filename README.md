@@ -130,17 +130,23 @@ For the user stories I created a domain model for each object, including attribu
 | ------- | ------- | - | - | - |
 | **Attributes:** | bikes | capacity |
 | **Methods:** | release_bike | dock(bike) | full? | empty? | remove_bikes |
+
 <br/>
+
 | Object: | Bike | | | 
 | ------- | ----- | - | - | 
 | **Attributes:** | broken |
 | **Methods:** | broken? | report_broken | fix |
+
 <br/>
+
 | Object: | Van | |
 | ------- | ----- | - |
 | **Attributes:** | van_bikes |
 | **Methods:** | get_bikes(station | empty_van | distribute_bikes(station) |
+
 <br/>
+
 | Object: | Garage | |
 | ------- | ----- | - |
 | **Attributes:** | garage_bikes |
