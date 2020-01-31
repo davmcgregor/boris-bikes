@@ -18,8 +18,8 @@ This project is based on the `User Stories` listed below. Each `User Story` has 
 
 1. Fork this repository, clone to your local machine then change into the directory:
 ```
-https://github.com/davmcgregor/boris-bikes.git 
-cd boris-bikes
+$ git clone https://github.com/davmcgregor/boris-bikes.git 
+$ cd boris-bikes
 ```
 2. Load dependencies with bundle:
 ```
@@ -133,21 +133,15 @@ ONE:
 | **Attributes:** | bikes | capacity |
 | **Methods:** | release_bike | dock(bike) | full? | empty? | remove_bikes |
 
-TWO:
-
 | Object: | Bike | | | 
 | ------- | ----- | - | - | 
 | **Attributes:** | broken |
 | **Methods:** | broken? | report_broken | fix |
 
-THREE:
-
 | Object: | Van | |
 | ------- | ----- | - |
 | **Attributes:** | van_bikes |
 | **Methods:** | get_bikes(station | empty_van | distribute_bikes(station) |
-
-FOUR:
 
 | Object: | Garage | |
 | ------- | ----- | - |
@@ -167,4 +161,4 @@ $> rspec
 * Complete [Step 22: Modules as mixins](https://github.com/davmcgregor/course/blob/master/boris_bikes/22_modules_as_mixins.md)
 * Complete [Post challenge](https://github.com/davmcgregor/course/blob/master/boris_bikes/post_challenge.md) extensions
 * Refactor Garage and Van classes
-* Update README
+* Update README to include Garage and Van functionality
