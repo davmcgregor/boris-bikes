@@ -1,5 +1,3 @@
-require 'docking_station'
-
 describe DockingStation do
   let(:bike) {Bike.new}
 

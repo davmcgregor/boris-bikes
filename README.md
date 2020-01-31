@@ -1,7 +1,7 @@
 ### [Makers Academy](http://www.makersacademy.com) - Week 1 Pair Programming Project
 
 # Boris-bikes 🚲
-[Outline](#Outline) | [Task](#Task) | [Installation Instructions](#Installation) | [Functional Description](#Functional_Description) |[Feature Tests](#Feature_Tests) | [User Stories](#Story) | [Objects & Methods](#Methods) | [Testing](#Testing)
+[Outline](#Outline) | [Task](#Task) | [Installation Instructions](#Installation) | [Functional Description](#Functional_Description) | [Feature Tests](#Feature_Tests) | [User Stories](#Story) | [Objects & Methods](#Methods) | [Testing](#Testing) | [Further improvements](#Further_Improvements)
 
 ![boris_bikes](boris_bikes.jpg)
 
@@ -16,7 +16,7 @@ This project is based on the `User Stories` listed below. Each `User Story` has 
 
 ## <a name="Installation">Installation Instructions</a>
 
-1. Fork this repository, clone to your local machine then change directory into it:
+1. Fork this repository, clone to your local machine then change into the directory:
 ```
 https://github.com/davmcgregor/boris-bikes.git 
 cd boris-bikes
@@ -26,14 +26,11 @@ cd boris-bikes
 $ gem install bundle
 $ bundle
 ```
-3. Load the app in IRB by requiring files from the lib directory:
+3. Run the app in the terminal:
 
 ```Shell
 $ irb
-> require './lib/airport.rb'
-> require './lib/bike.rb'
-> require './lib/van.rb'
-> require './lib/garage.rb'
+> require './lib/boris_bikes.rb'
 ```
 ## <a name="Functional_Description">Functional Description</a>
 The system's functionality includes:
@@ -165,3 +162,9 @@ Tests were written with RSpec. To run the tests in terminal:
 $> cd boris-bikes
 $> rspec
 ```
+
+## <a name="Further_Improvements">Further Improvements</a>
+* Complete [Step 22: Modules as mixins](https://github.com/davmcgregor/course/blob/master/boris_bikes/22_modules_as_mixins.md)
+* Complete [Post challenge](https://github.com/davmcgregor/course/blob/master/boris_bikes/post_challenge.md) extensions
+* Refactor Garage and Van classes
+* Update README

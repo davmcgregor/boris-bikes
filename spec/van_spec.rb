@@ -1,5 +1,3 @@
-require 'van'
-
 describe Van do
   it 'removes broken bikes from a docking station' do
     bike = Bike.new

@@ -1,5 +1,3 @@
-require 'garage'
-
 describe Garage do
   it {is_expected.to respond_to(:deliver_bikes).with(1).argument}
 

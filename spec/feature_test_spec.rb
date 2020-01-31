@@ -1,10 +1,3 @@
-# ruby './spec/feature_test_spec.rb'
-
-require './lib/docking_station.rb'
-require './lib/bike.rb'
-require './lib/van.rb'
-require './lib/garage.rb'
-
 broken_bike = Bike.new
 broken_bike.report_broken
 good_bike = Bike.new
