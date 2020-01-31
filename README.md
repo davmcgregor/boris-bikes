@@ -126,23 +126,25 @@ I'd like vans to collect working bikes from garages and distribute them to docki
 
 For the user stories I created a domain model for each object, including attributes and behaviour:
 
-ONE:
-
+####DockingStation
 | Object: | DockingStation | | | |
 | ------- | ------- | - | - | - |
 | **Attributes:** | bikes | capacity |
 | **Methods:** | release_bike | dock(bike) | full? | empty? | remove_bikes |
 
+####Bike
 | Object: | Bike | | | 
 | ------- | ----- | - | - | 
 | **Attributes:** | broken |
 | **Methods:** | broken? | report_broken | fix |
 
+####Van
 | Object: | Van | |
 | ------- | ----- | - |
 | **Attributes:** | van_bikes |
 | **Methods:** | get_bikes(station | empty_van | distribute_bikes(station) |
 
+####Garage
 | Object: | Garage | |
 | ------- | ----- | - |
 | **Attributes:** | garage_bikes |
